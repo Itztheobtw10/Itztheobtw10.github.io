@@ -71,7 +71,7 @@
 }
 .navbar a:hover{
     color:var(--main-color);
-    border-bottom: 3px solid var(--main-color);
+    border-bottom: 5px solid var(--main-color);
 }
 .gradient-btn{
     font-size: 1.8rem;
