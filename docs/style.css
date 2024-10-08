@@ -7,17 +7,18 @@
     font-family: "Futura PT";
   }
   :root {
-    --bg-color: #000000;
     --second-bg-color: #101010;
     --text-color: white;
-    --main-color: #ea580c;
+    --main-color: #04619f;
   }
   html {
     font-size: 60%;
     overflow-x: hidden;
   }
   body{
-    background: var(--bg-color);
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+    height: 100vh;
     color: car(--text-color);
 
   }
@@ -52,11 +53,9 @@
  }
 
  span{
-    background: linear-gradient(
-        270deg,
-        #ec6205 10%,
-        #c40000 100%
-    );
+    background-image: linear-gradient(5deg in oklab, #001625, #04619f);
+    -webkit-text-stroke: .25px #04619f;
+    text-stroke: .25px #04619f;
     background-clip: text;
     color: transparent;
 }
@@ -77,18 +76,20 @@
     font-size: 1.8rem;
     padding: 1rem 2rem;
     border-radius: 3rem;
-    background: linear-gradient(
-        270deg,
-        #ec6205 10%,
-        #c40000 100%
-    );
+    background-image: linear-gradient(5deg in oklab , #001625, #04619f);
+    border: #fff 1.5px solid;
     letter-spacing: 1px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     color: white;
-    border: none;
     text-wrap: nowrap;
 }
 .gradient-btn:hover{
-    transform: scale(1.05);
+    transform: scale(1.1);
+    transform: translate(0, -5px);
+}
+
+.gradient-btn:active{
+    transform: translate(0, 0);
+    transition-duration: 100ms;
 }
