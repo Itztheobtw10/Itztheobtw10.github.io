@@ -4,7 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     scroll-behavior: smooth;
-    font-family: "Futura PT";
+    font-family: "Franklin Gothic";
   }
   :root {
     --second-bg-color: #101010;
@@ -17,7 +17,7 @@
   }
   body{
     background-color: #000000;
-    background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+    background-image: linear-gradient(deg, #000000 0%, #000000 74%);;
     height: 100vh;
     color: car(--text-color);
 
@@ -53,9 +53,9 @@
  }
 
  span{
-    background-image: linear-gradient(5deg in oklab, #000000, #000000);
-    -webkit-text-stroke: .25px #04619f;
-    stroke: .25px #04619f;
+    background-image:linear-gradient(5deg in oklab , #001625, #04619f);
+    -webkit-text-stroke: .100000px #ffffff;
+    stroke: .25px #ffffff;
     background-clip: text;
     color: transparent;
 }
@@ -114,11 +114,13 @@ section{
 }
 
 .home-content h1{
+  color: #ffffff;
   font-size: 8rem;
   font-weight: 700;
   margin-top: 1.5rem;
 }
 .home-content h3{
+  color: #ffffff;
   margin: 1rem 0;
   font-size: 4rem;
 }
@@ -126,6 +128,7 @@ section{
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.8;
+  color: #ffffff;
 }
 
 .home-img img{
