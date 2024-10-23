@@ -218,9 +218,11 @@ home-img img:hover{
 .about-content h2{
   font-size: 7rem;
   text-align: left;
+  color: var(--main-color);
 }
 .about-content p{
   font-size: 1.8rem;
+  color: #ffffff;
   
 }
 .about-content .btn{
