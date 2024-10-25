@@ -19,7 +19,7 @@
     background-color: #000000;
     background-image: linear-gradient(deg, #000000 0%, #000000 74%);;
     height: 100vh;
-    color: car(--text-color);
+    color: var(--text-color);
 
   }
   .header{
@@ -131,13 +131,14 @@ section{
   color: #ffffff;
 }
 
-.home-img img{
+.home-img img {
   width: 32vw;
   border-radius: 50%;
   box-shadow: 0 0 25px var(--main-color);
   transition: 0.4s ease-in-out;
 }
-home-img img:hover{
+
+.home-img img:hover {
   box-shadow: 0 0 25px var(--main-color),
               0 0 50px var(--main-color),
               0 0 100px var(--main-color);
@@ -153,8 +154,10 @@ home-img img:hover{
   border: 2px solid var(--main-color);
   border-radius: 50%;
   color: var(--main-color);
-  margin: 3rem, 0.5rem;
+  margin: 0 .5rem;
   transition: ease-in-out;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
 }
 .social-icons a:hover{
   color: var(--text-color);
@@ -165,6 +168,7 @@ home-img img:hover{
 .btn-group{
   display: flex;
   gap: 1.5rem;
+  margin-top: .25rem;
 }
 
 .btn{
@@ -178,6 +182,7 @@ home-img img:hover{
   border: 2px solid transparent;
   font-weight: 600;
   transition: ease-in-out;
+  margin: 1.5rem 0;
 }
 .btn:hover{
   transform: scale(1.05);
@@ -268,7 +273,7 @@ home-img img:hover{
   border-radius: 3rem;
   cursor: pointer;
   border: 5px solid transparent
-  transition: 0.4s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .service-box:hover{
   background: var(--second-bg-color);
@@ -297,4 +302,117 @@ home-img img:hover{
 .service-info i{
   font-size: 8rem;
   
+}
+.project{
+  background-color: var(--second-bg-color);
+}
+.heading{
+  color: white;
+}
+
+
+.project-box{
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  place-items: center;
+  gap: 3rem;
+  row-gap: 5rem;
+}
+.project-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 3rem;
+  gap: 5rem;
+  padding: 5rem 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--main-color);
+  transition: 0.3s ease-in-out;
+}
+.project-card:hover{
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color);
+  transform: scale(1.02);
+}
+.project-card img{
+  max-width: 300px;
+  border-radius: 2em;
+  object-fit: cover;
+}
+.project-card h3{
+  font-size: 3rem;
+  color: #ffffff
+}
+.project-card p{
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.contact{
+  background-color: var(--bg-color);
+}
+.contact h2{
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+.contact form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem 0;
+  text-align: center;
+
+}
+.contact form .input-box input,
+.contact form textarea{
+  width: 100%;
+  padding: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  border: 2px solid var(--main-color);
+  margin: 1.5rem 0;
+  resize: none;
+}
+.footer{
+  background-color: var(--second-bg-color);
+  padding: 50px 0;
+  width: 100v;
+  position: relative;
+  left: 0;
+ 
+}
+.footer .social-icons{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.footer ul{
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+.footer ul li{
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer ul li a{
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover{
+  border-bottom: 3px solid var(--main-color);
+}
+.footer .copyright{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+  margin-bottom: 0;
+  color: white;
+ 
 }
