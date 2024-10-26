@@ -200,6 +200,93 @@ section{
   background-color: var(--main-color);
   color: black;
 }
+.text-animation{
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+.text-animation span{
+  position: relative;
+}
+.text-animation span::before{
+  content: "Aspiring Software Engineer";
+  color: var(--main-color);
+  animation: words 20s infinite;
+}
+.text-animation span::after{
+  content: "";
+  background-color: var(--bg-color);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid var(--bg-color);
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(20)infinite;
+}
+@keyframes cursor{
+  to{
+    border-left: 2px solid var(--main-color);
+  }
+}
+@keyframes words{
+  0%,
+  20%{
+    content: "Comp Sci Student";
+  }
+  21%,
+  40%{
+    content: "Web Designer"
+  }
+  41%,
+  60%{
+    content: "Innovator";
+  }
+  61%,
+  80%{
+    content: "A-Level Student";
+  }
+  81%,
+  100%{
+    content: "Forex Trader";
+  }
+}
+@keyframes typing{
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95%{
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85%{
+    width: calc(100% + 8px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .about{
   display: flex;
@@ -310,7 +397,6 @@ section{
   color: white;
 }
 
-
 .project-box{
   grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
   place-items: center;
@@ -338,6 +424,39 @@ section{
               0 0 50px var(--main-color);
   transform: scale(1.02);
 }
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.project-card p {
+  font-size: 1em;
+  color: #666;
+}
+
+.project-card .btn {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
 .project-card img{
   max-width: 300px;
   border-radius: 2em;
@@ -416,3 +535,59 @@ section{
   color: white;
  
 }
+
+@media(max-width:1258px){
+  #menu-icon{
+    display: block;
+  }
+  .navbar{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3rem;
+    background: rgba(0,0,0,0.8);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+  }
+  .navbar a{
+    display: block;  
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: var(--text-color);
+  }
+  .navbar.active{
+    display: block;
+  }
+  .gradient-btn{
+    display: none;
+  }
+  .home{
+    flex-direction: column-reverse;
+    margin: 5rem 0;
+    gap: 5rem;
+  }
+  .home-content{
+    align-items: center;
+    text-align: center;
+  }
+  .home-img img{
+    width: 56vw;
+  }
+  .about{
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .about h2{
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .about img{
+    width: 52vw;
+  }
+  .contact form{
+    flex-direction: column;
+  }
+}
+
