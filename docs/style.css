@@ -125,6 +125,7 @@ section{
   font-size: 4rem;
 }
 .home-content p{
+  width: max-content;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.8;
@@ -207,6 +208,7 @@ section{
 }
 .text-animation span{
   position: relative;
+ 
 }
 .text-animation span::before{
   content: "Aspiring Software Engineer";
@@ -275,16 +277,6 @@ section{
     width: calc(100% + 8px);
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 .about{
   display: flex;
